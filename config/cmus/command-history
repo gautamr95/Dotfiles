@@ -1,0 +1,54 @@
+add /media/gautam/Windows/Users/Gautam Ramaswamy/Music/
+clear
+refresh 
+add ~/Music/Gojira - Les Enfants Sauvages (2014) [MP3 320 - Stepherd]/
+add ~/Music/LCD Soundsystem - Sound Of Silver (2007) 320kbps/
+clear 
+save
+set color_win_sel_bg=cyan
+set color_win_cur_sel_bg=red
+set color_win_cur_sel_bg=cyan
+set color_separator=cyan
+set color_titleline_bg=cyan
+set color_win_title_bg=cyan
+set color_win_sel_bg=blue
+colorscheme default
+set color_win_inactive_sel_bg=cyan
+set color_win_dir=cyan
+set color_win_dir=lightcyan
+set color_win_cur_sel_bg=default
+colorscheme cyan
+colorscheme zenburn
+colorscheme solarized-light
+colorscheme solarized-dark
+colorscheme night
+colorscheme green-mono-88
+colorscheme xterm-white
+colorscheme green
+colorscheme gray-88
+bind -f common z player-prev
+add ~/Music/
+colorscheme
+q
+add Music/
+set color_cmdline_bg=default
+set color_win_bg=default
+set color_win_bg=black
+set color_win_bg=bg
+set color_win_bg=background
+set color_win_bg=red
+set color_cmdline_bg=red
+fset ogg-or-mp3=ogg|mp3
+fset unheard=play_count=0
+set color_statusline_bg=gray
+set color_statusline_bg=red
+set color_win_cur_sel_attr=default
+set color_win_cur_sel_attr=red
+set color_win_cur_sel_bg=blue
+set color_win_dir=lightblue
+set color_win_sel_bg=red
+set color_separator=blue
+w
+a
+quit
+qut
