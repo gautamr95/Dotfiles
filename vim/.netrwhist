@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/gautam/sp17/2017sp-staff/4410/a3/cmsautograde/Submissions/mmc278'
 let g:netrw_dirhist_2='/home/gautam/.config/Franz'
 let g:netrw_dirhist_3='/home/gautam/.config/compton'
 let g:netrw_dirhist_4='/home/gautam/Downloads/GitHub/polybar/build'
+let g:netrw_dirhist_5='/home/gautam/.oh-my-zsh'
