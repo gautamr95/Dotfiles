@@ -16,14 +16,13 @@ background-alt = #444
 ;foreground = #dfdfdf
 foreground = #c5c8c6
 foreground-alt = #555
-primary = #ffb52a
+primary = #de935f
 secondary = #a54242
 alert = #bd2c40
 
 [bar/main]
 monitor = eDP1
 width = 100%
-;height = 27
 height = 25
 offset-x = 0
 offset-y = 0
@@ -57,7 +56,7 @@ font-2 = FontAwesome:fontformat=truetype:size=9;1
 
 modules-left = i3
 modules-center = spotify
-modules-right = xbacklight volume memory cpu wlan battery date powermenu
+modules-right = xbacklight volume memory cpu wlan temperature battery date
 
 tray-position = right
 tray-padding = 2

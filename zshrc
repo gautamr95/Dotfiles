@@ -95,6 +95,7 @@ export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\
 ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 . /etc/zsh_command_not_found
+export PATH=$HOME/Downloads/GitHub/Pokemon-Terminal:$PATH
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/gautam/.sdkman"
