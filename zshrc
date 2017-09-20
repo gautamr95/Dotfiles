@@ -97,6 +97,8 @@ ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 . /etc/zsh_command_not_found
 export PATH=$HOME/Downloads/GitHub/Pokemon-Terminal:$PATH
 
+source $HOME/.euca/fractus/eucarc
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/gautam/.sdkman"
 [[ -s "/home/gautam/.sdkman/bin/sdkman-init.sh" ]] && source "/home/gautam/.sdkman/bin/sdkman-init.sh"
