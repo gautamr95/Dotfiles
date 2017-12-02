@@ -52,7 +52,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,8 +84,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
 export TERMINAL=/usr/local/bin/termite
 export TERM=xterm-256color
 export GOPATH=$HOME/go
@@ -96,6 +96,10 @@ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\
 ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 . /etc/zsh_command_not_found
 export PATH=$HOME/Downloads/GitHub/Pokemon-Terminal:$PATH
+#$HOME/google-cloud-sdk/bin:$PATH
+
+. /home/gautam/google-cloud-sdk/path.zsh.inc
+. /home/gautam/google-cloud-sdk/completion.zsh.inc
 
 source $HOME/.euca/fractus/eucarc
 

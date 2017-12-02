@@ -286,7 +286,7 @@ label = %date%, %time%
 [module/volume]
 type = internal/volume
 
-format-volume = <ramp-volume> <label-volume> 
+format-volume = <ramp-volume> <label-volume>
 ;label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
@@ -320,7 +320,7 @@ ramp-volume-2 = 
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 96
+full-at = 95
 
 time-format = %k:%M
 
@@ -348,7 +348,7 @@ animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
-animation-charging-4 =  
+animation-charging-4 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 

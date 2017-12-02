@@ -55,8 +55,8 @@ set splitright                  " Open vsp on right
 set pastetoggle=<F2>
 set noshowmode                  " Hide mode (lightline shows mode)
 set expandtab                   " Spaces > tabs
-set tabstop=2                   " 2 spaces
-set shiftwidth=2                " 2 2 CHAINZ
+set tabstop=4                   " 4 spaces
+set shiftwidth=4                " 4
 set nofoldenable                " Disable folding
 set clipboard+=unnamedplus      " Use system clipboard
 set hidden
