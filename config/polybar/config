@@ -43,20 +43,19 @@ border-color = #00000000
 padding-left = 0
 padding-right = 0
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 1
+module-margin-right = 1
 
-#font-0 = fixed:pixelsize=10;1
-#font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-#font-2 = MaterialDesignIcons:pixelsize=10;1
-
-font-0 = Roboto:fontformat=truetype:size=11;1
-font-1 = Roboto:fontformat=truetype:size=10;1
-font-2 = FontAwesome:fontformat=truetype:size=9;1
+#font-0 = Roboto:fontformat=truetype:size=10;1
+#font-1 = RobotoMonoNerdFont:fontformat=truetype:size=10;1
+#font-0 = Hack:fontformat=truetype:size=10;1
+font-0 = KnackNerdFont:fontformat=truetype:size=10;1
+#font-2 = FontAwesome5Free:pixelsize=10
+#font-3 = FontAwesome5Brands:pixelsize=10
 
 modules-left = i3
 modules-center = spotify
-modules-right = xbacklight volume memory cpu wlan temperature battery date
+modules-right = volume backlight memory cpu wlan temperature battery date
 
 tray-position = right
 tray-padding = 2
@@ -139,7 +138,7 @@ ws-icon-5 = 6:Slack;
 ws-icon-6 = 7:Code;
 ws-icon-7 = 8:Files;
 ws-icon-8 = 9:Documents;
-ws-icon-9 = 10;10
+ws-icon-9 = 10:Firefox;
 ws-icon-default = 
 
 ; Only show workspaces on the same output as the bar
@@ -208,6 +207,23 @@ bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+format =  <label>
+;label = BL
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #ff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
 [module/backlight-acpi]
 inherit = module/xbacklight
 type = internal/backlight
@@ -236,7 +252,7 @@ interval = 3.0
 
 format-connected = <label-connected>
 ;format-connected-underline = #85678f
-label-connected =   %essid%
+label-connected =  %essid%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -271,17 +287,17 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = " %a %b %d"
-date-alt = " %Y-%m-%d"
+date = %a %b %d
+date-alt = %Y-%m-%d
 
 time = %l:%M %P
 time-alt = %l:%M:%S
 
-format-prefix = 
+format-prefix = " "
 ;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #81a2be
 
-label = %date%, %time%
+label = %date% - %time%
 
 [module/volume]
 type = internal/volume
@@ -355,7 +371,7 @@ animation-charging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 55
 
 format = <ramp> <label>
 ;format-underline = #cc6666
@@ -412,6 +428,7 @@ margin-bottom = 5
 ; vim:ft=dosini
 
 [module/spotify]
+format-padding = 2
 type = custom/script
 exec = ~/.config/polybar/spotify.sh
 click-left = playerctl -p spotify play-pause

@@ -86,23 +86,25 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
-export TERMINAL=/usr/local/bin/termite
+export TERMINAL=/usr/bin/termite
 export TERM=xterm-256color
 export GOPATH=$HOME/go
 export ANDROIDPATH=$HOME/Android
 export PATH=$GOPATH/bin:$ANDROIDPATH/Sdk/platform-tools:$PATH
-export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64\
-${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-. /etc/zsh_command_not_found
 export PATH=$HOME/Downloads/GitHub/Pokemon-Terminal:$PATH
-#$HOME/google-cloud-sdk/bin:$PATH
+#export PATH=/opt/cuda/bin:$PATH
 
 . /home/gautam/google-cloud-sdk/path.zsh.inc
 . /home/gautam/google-cloud-sdk/completion.zsh.inc
 
-source $HOME/.euca/fractus/eucarc
+. /usr/share/doc/pkgfile/command-not-found.zsh
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/gautam/.sdkman"
-[[ -s "/home/gautam/.sdkman/bin/sdkman-init.sh" ]] && source "/home/gautam/.sdkman/bin/sdkman-init.sh"
+#if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+#    ssh-agent | head -n -1 > ~/.ssh-agent-thing
+#fi
+#if [[ "$SSH_AGENT_PID" == "" ]]; then
+#    eval "$(<~/.ssh-agent-thing)"
+#fi
+
+# OPAM configuration
+. /home/gautam/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

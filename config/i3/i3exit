@@ -1,11 +1,11 @@
 #!/bin/sh
 lock() {
-    dm-tool switch-to-greeter
+    i3lock-fancy -gf Roboto-Regular -- scrot -z && sleep 1
 }
 
 case "$1" in
     lock)
-        lock
+        lock && xset dpms force off
         ;;
     logout)
         i3-msg exit

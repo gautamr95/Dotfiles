@@ -7,7 +7,5 @@
 # invoke global X session script
 . /etc/X11/Xsession
 
-# xss-lock -- dm-tool lock
-
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
