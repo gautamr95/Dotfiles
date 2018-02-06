@@ -229,7 +229,6 @@ assign [class="*pcmanfm*"] 8:Files
 assign [class="ranger"] 8:Files
 
 
-exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy -gf Roboto-Regular -- scrot -z && systemctl suspend" -notify 30 -notifier 'xset dpms force off'
 #exec --no-startup-id xset s 300 300
 #exec --no-startup-id xss-lock -n $HOME/.config/i3/dim-screen.sh -- dm-tool switch-to-greeter
 #exec --no-startup-id xss-lock -n $HOME/.config/i3/dim-screen.sh -- lock -gf Roboto-Regular -- scrot -z

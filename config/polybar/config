@@ -290,8 +290,8 @@ interval = 1
 date = %a %b %d
 date-alt = %Y-%m-%d
 
-time = %l:%M %P
-time-alt = %l:%M:%S
+time = %I:%M %P
+time-alt = %I:%M:%S %P
 
 format-prefix = " "
 ;format-prefix-foreground = ${colors.foreground-alt}
@@ -371,7 +371,7 @@ animation-charging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 55
+warn-temperature = 60
 
 format = <ramp> <label>
 ;format-underline = #cc6666

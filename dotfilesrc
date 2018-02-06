@@ -1,4 +1,5 @@
 [dotfiles]
+packages = ['config']
 ignore = [
     '.git',
     '.gitignore',
