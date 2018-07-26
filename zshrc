@@ -108,3 +108,5 @@ export PATH=$HOME/Downloads/GitHub/Pokemon-Terminal:$PATH
 
 # OPAM configuration
 . /home/gautam/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+#PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"

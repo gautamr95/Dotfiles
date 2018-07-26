@@ -211,7 +211,6 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id nm-applet
 
 exec --no-startup-id discord
-exec --no-startup-id steam
 exec --no-startup-id spotify
 exec --no-startup-id compton --config $HOME/.config/compton/config
 exec --no-startup-id caffeine

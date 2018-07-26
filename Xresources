@@ -102,3 +102,6 @@ rofi.color-window:                   argb:f21d1f21, #373b41, #c5c8c6
 rofi.separator-style:                solid
 
 rofi.modi: window,run,ssh,drun
+
+Xcursor.size: 16
+
