@@ -31,5 +31,9 @@ Plug 'rust-lang/rust.vim'
 Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'frankier/neovim-colors-solarized-truecolor-only'
+Plug 'fatih/vim-go'
+Plug 'whatyouhide/vim-gotham'
+
 call plug#end()
 

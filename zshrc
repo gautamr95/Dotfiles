@@ -52,7 +52,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages rust)
+plugins=(git colored-man-pages command-not-found)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,24 +88,25 @@ export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 export TERMINAL=/usr/bin/termite
 export TERM=xterm-256color
-export GOPATH=$HOME/go
-export ANDROIDPATH=$HOME/Android
-export PATH=$GOPATH/bin:$ANDROIDPATH/Sdk/platform-tools:$PATH
-export PATH=$HOME/.cargo/bin/:$PATH
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/Downloads/nrfjprog
+export PATH=$PATH:/usr/local/go/bin
 
-. /usr/share/doc/pkgfile/command-not-found.zsh
+export color0_alpha="#aa${color0/'#'}"
 
-#if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-#    ssh-agent | head -n -1 > ~/.ssh-agent-thing
-#fi
-#if [[ "$SSH_AGENT_PID" == "" ]]; then
-#    eval "$(<~/.ssh-agent-thing)"
-#fi
+#export NVM_DIR="/home/gautam/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+source $HOME/.profile
+eval "$(direnv hook zsh)"
+function run_docker_container() {
+  container=$(docker-compose ps | grep $1 | cut -f1 -d' ')
+  if [ "$container" == "" ] ; then
+    docker-compose up -d --remove-orphans dev
+  fi
+  docker-compose exec dev bash
+}
 
-# OPAM configuration
-. /home/gautam/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-#PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"
+alias envnordic='cd ~/co/nordic && run_docker_container samsara-nordic-dev'
 
 #(cat ~/.cache/wal/sequences &)
 

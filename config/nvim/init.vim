@@ -47,13 +47,14 @@ set laststatus=2                " Always show statusbar
 set scrolloff=5                 " Minimum space on bottom/top of window
 set sidescrolloff=7             " Minimum space on side
 set sidescroll=1
-set list                        " Display hidden chars as defined below
-set listchars=tab:▷⋅,trail:⋅,nbsp:+,extends:»,precedes:«
+"set list                        " Display hidden chars as defined below
+"set listchars=tab:▷⋅,trail:⋅,nbsp:+,extends:»,precedes:«
 set splitright                  " Open vsp on right
 set pastetoggle=<F2>
 set noshowmode                  " Hide mode (lightline shows mode)
 set expandtab                   " Spaces > tabs
 set tabstop=4                   " 4 spaces
+set softtabstop=4               " number of spaces in tab when editing
 set shiftwidth=4                " 4
 set nofoldenable                " Disable folding
 set clipboard+=unnamedplus      " Use system clipboard
@@ -82,6 +83,11 @@ autocmd! BufReadPost * call SetCursorPosition()
 autocmd! BufWritePost * Neomake
 
 set ff=unix
+
+let g:go_fmt_command = "gofmt"
+autocmd FileType go setlocal tabstop=2|setlocal shiftwidth=2|setlocal softtabstop=2|setlocal noexpandtab
+autocmd FileType go compiler go
+au FileType go nmap gd <Plug>(go-def)
 
 " Move lines up(-) or down(_)
 noremap - ddp

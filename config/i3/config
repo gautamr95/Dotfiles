@@ -210,12 +210,18 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id nm-applet
 
 exec --no-startup-id discord
-exec --no-startup-id spotify
+exec --no-startup-id spotify --force-device-scale-factor=2.0
 exec --no-startup-id picom -b
 exec --no-startup-id caffeine
+exec --no-startup-id gnome-settings-daemon
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec /usr/lib/geoclue-2.0/demos/agent
+
+exec eval "$(ssh-agent -s)"
+exec ssh-add $HOME/.ssh/id_rsa
+exec xset s 300 300
+exec xss-lock -l $HOME/transfer-sleep-lock-i3lock.sh&
 
 # assign [class="Spotify"] 3
 for_window [class="Spotify"] move to workspace 3:Spotify
@@ -228,8 +234,6 @@ assign [class="*pcmanfm*"] 8:Files
 assign [class="ranger"] 8:Files
 
 
-exec xset s 300 300
-exec xss-lock -n $HOME/.config/i3/dim-screen.sh -- $HOME/.config/i3/transfer-sleep-lock-i3lock.sh
 exec $HOME/.config/i3/display.sh
 exec wal -R
 

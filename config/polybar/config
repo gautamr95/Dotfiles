@@ -30,9 +30,8 @@ alert = ${xrdb:color3:#222}
 ;alert = #bd2c40
 
 [bar/main]
-monitor = ${env:MONITOR:eDP1}
 width = 100%
-height = 25
+height = 50
 offset-x = 0
 offset-y = 0
 radius = 3.0
@@ -58,14 +57,17 @@ module-margin-right = 1
 #font-0 = Roboto:fontformat=truetype:size=10;1
 #font-1 = RobotoMonoNerdFont:fontformat=truetype:size=10;1
 #font-0 = Hack:fontformat=truetype:size=10;1
-font-0 = HackNerdFont:fontformat=truetype:size=10;1
+font-0 = KnackNerdFont:fontformat=truetype:size=18;1
+font-1 = FontAwesome:pixelsize=20;3
+;font-3 = Font Awesome 5 Brands:pixelsize=10;3
 
 modules-left = i3
 modules-center = spotify
-modules-right = volume backlight memory cpu wlan temperature battery date
+modules-right = volume memory cpu wlan temperature date
 
 tray-position = ${env:TRAY_POS:}
-tray-padding = 2
+tray-padding = 5
+tray-maxsize = 30
 ;tray-transparent = true
 tray-background = ${colors.background}
 
@@ -296,6 +298,10 @@ label = %date% - %time%
 
 [module/volume]
 type = internal/alsa
+
+master-soundcard = hw:0
+speaker-soundcard = hw:1
+headphone-soundcard = hw:0
 
 format-volume = <ramp-volume> <label-volume>
 ;label-volume = VOL

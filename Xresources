@@ -47,7 +47,8 @@
 *.color15: nord6
 
 !---- ROFI--------!
-rofi.font: Hack 12
+rofi.font: Hack 20
+rofi.modi: window,run,ssh,drun
 
-Xcursor.size: 16
+Xcursor.size: 20
 
