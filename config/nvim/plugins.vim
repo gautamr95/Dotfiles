@@ -28,5 +28,9 @@ Plug 'SirVer/ultisnips'                 " Snippets engine
 Plug 'honza/vim-snippets'               " Snippets
 Plug 'dylanaraps/wal.vim'
 
+Plug 'frankier/neovim-colors-solarized-truecolor-only'
+Plug 'fatih/vim-go'
+Plug 'whatyouhide/vim-gotham'
+
 call plug#end()
 

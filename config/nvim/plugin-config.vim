@@ -3,7 +3,7 @@ let ruby_operators = 1
 
 
 """ editorconfig
-let g:EditorConfig_core_mode = 'external_command'
+"let g:EditorConfig_core_mode = 'external_command'
 
 
 """ ctrlp config

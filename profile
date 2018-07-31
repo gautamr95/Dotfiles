@@ -8,19 +8,19 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-fi
-
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-export PATH="$HOME/.cargo/bin:$PATH"
-export SSH_ASKPASS=/usr/bin/ssh-askpass
-eval "$(ssh-agent -s)"
-ssh-add $HOME/.ssh/id_rsa &
+export GO15VENDOREXPERIMENT=1
+export PATH="$HOME/ti/ccsv7/eclipse:$PATH"
 
+export PATH="$PATH:/opt/microchip/xc8/v1.45/bin"
+export GOPATH="/home/gautam/co/backend/go"
+export PATH="/usr/local/go/bin:$PATH"
+export NVM_DIR=$HOME/.nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+alias gulp="yarn run gulp"
+alias taskrunner="go run /home/gautam/co/backend/go/src/samsaradev.io/app/taskrunner/*.go"
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init --no-rehash -)" 2> /dev/null
+(nodenv rehash &) 2> /dev/null # background rehash
