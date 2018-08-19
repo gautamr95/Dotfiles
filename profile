@@ -24,6 +24,3 @@ export SSH_ASKPASS=/usr/bin/ssh-askpass
 eval "$(ssh-agent -s)"
 ssh-add $HOME/.ssh/id_rsa &
 
-#xautolock -time 10 -locker "i3lock-fancy -gf Roboto-Regular -- scrot -z" -notify 30 -notifier "xset dpms force off"  &
-xset s 300 300
-xss-lock -n $HOME/.config/i3/dim-screen.sh -- $HOME/.config/i3/lock-screen.sh &

@@ -8,18 +8,20 @@
 # Options to pass to i3lock
 i3lock_options="-k -e -B=10"
 
+id=$(xinput | grep -i Mouse | cut -f2 | cut -d "=" -f2 | sort -r | head -1)
+
 # Run before starting the locker
 pre_lock() {
     #mpc pause
     playerctl pause
     xset dpms force off
-    xinput --set-prop 10 "Device Enabled" "0"
+    xinput --set-prop $id "Device Enabled" "0"
     return
 }
 
 # Run after the locker exits
 post_lock() {
-    xinput --set-prop 10 "Device Enabled" "1"
+    xinput --set-prop $id "Device Enabled" "1"
     return
 }
 

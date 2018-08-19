@@ -1,6 +1,6 @@
 #!/bin/sh
 lock() {
-    $HOME/.config/i3/lock-screen.sh
+    xset s activate
 }
 
 case "$1" in

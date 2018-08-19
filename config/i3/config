@@ -216,6 +216,7 @@ exec --no-startup-id compton --config $HOME/.config/compton/config
 exec --no-startup-id caffeine
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec /usr/lib/geoclue-2.0/demos/agent
 
 # assign [class="Spotify"] 3
 for_window [class="Spotify"] move to workspace 3:Spotify
@@ -228,11 +229,10 @@ assign [class="*pcmanfm*"] 8:Files
 assign [class="ranger"] 8:Files
 
 
-#exec --no-startup-id xset s 300 300
-#exec --no-startup-id xss-lock -n $HOME/.config/i3/dim-screen.sh -- dm-tool switch-to-greeter
-#exec --no-startup-id xss-lock -n $HOME/.config/i3/dim-screen.sh -- lock -gf Roboto-Regular -- scrot -z
-#exec xautolock -time 11 -locker 'systemctl suspend'
-exec nitrogen --restore
+exec xset s 300 300
+exec xss-lock -n $HOME/.config/i3/dim-screen.sh -- $HOME/.config/i3/transfer-sleep-lock-i3lock.sh
+exec xrandr --output DP2 --rotate normal --auto --right-of eDP1 --primary
+exec $HOME/.fehbg
 
 # Set up audio keys
 bindsym XF86AudioMute exec amixer -D pulse sset 'Master' toggle

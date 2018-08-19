@@ -26,6 +26,7 @@ Plug 'ryanoasis/vim-devicons'
 
 Plug 'SirVer/ultisnips'                 " Snippets engine
 Plug 'honza/vim-snippets'               " Snippets
+Plug 'dylanaraps/wal.vim'
 
 call plug#end()
 
