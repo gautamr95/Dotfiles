@@ -232,6 +232,7 @@ assign [class="ranger"] 8:Files
 exec xset s 300 300
 exec xss-lock -n $HOME/.config/i3/dim-screen.sh -- $HOME/.config/i3/transfer-sleep-lock-i3lock.sh
 exec $HOME/.config/i3/display.sh
+exec wal -R
 
 # Set up audio keys
 bindsym XF86AudioMute exec amixer -D pulse sset 'Master' toggle
@@ -276,8 +277,16 @@ mode "$mode_system" {
 bindsym $mod+Shift+e mode "$mode_system"
 
 # Colors
-# class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #5e8d87 #ffffff #c5c8c6   #5e8d87
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
 
 # GAPS
 for_window [class="^.*"] border pixel 0
@@ -330,8 +339,3 @@ mode "$mode_gaps_outer" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-#client.focused #859900 #859900 #fdf6e3 #6c71c4
-#client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
-#client.unfocused #073642 #073642 #93a1a1 #586e75
-#client.urgent #d33682 #d33682 #fdf6e3 #dc322f

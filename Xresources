@@ -38,19 +38,6 @@
 
 !---- ROFI--------!
 rofi.font: Hack 12
-! "Color scheme for normal row" Set from: File
-!                                    'bg'           'fg'     'bgalt'        'hlbg'   'hlfg'
-rofi.color-normal:                   argb:e6282a2e, #c5c8c6, argb:2f373b41, #5e8d87, #c5c8c6
-! "Color scheme for urgent row" Set from: File
-rofi.color-urgent:                   argb:e6282a2e, #a54242, argb:2f373b41, #a54242, #c5c8c6
-! "Color scheme for active row" Set from: File
-rofi.color-active:                   argb:e6282a2e, #de935f, argb:2f373b41, #de935f, #c5c8c6
-! "Color scheme window" Set from: File
-rofi.color-window:                   argb:f21d1f21, #373b41, #c5c8c6
-! "Separator style (none, dash, solid)" Set from: XResources
-rofi.separator-style:                solid
-
-rofi.modi: window,run,ssh,drun
 
 Xcursor.size: 16
 
