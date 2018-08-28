@@ -24,11 +24,12 @@ endif
 " Colorscheme
 set background=dark
 colorscheme wal
-hi Normal guibg=None ctermbg=NONE
+hi Normal guibg=None ctermbg=None
 hi NonText guibg=None ctermbg=None
 
 set mouse=a
 set cursorline                  " Highlight the current line
+hi CursorLine ctermfg=None ctermbg=None
 set lazyredraw                  " Faster scrolling
 set number                      " Show line number
 set relativenumber              " Show relative line number
