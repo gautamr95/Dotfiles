@@ -231,8 +231,7 @@ assign [class="ranger"] 8:Files
 
 exec xset s 300 300
 exec xss-lock -n $HOME/.config/i3/dim-screen.sh -- $HOME/.config/i3/transfer-sleep-lock-i3lock.sh
-exec xrandr --output DP2 --rotate normal --auto --right-of eDP1 --primary
-exec $HOME/.fehbg
+exec $HOME/.config/i3/display.sh
 
 # Set up audio keys
 bindsym XF86AudioMute exec amixer -D pulse sset 'Master' toggle
