@@ -64,7 +64,7 @@ modules-left = i3
 modules-center = spotify
 modules-right = volume backlight memory cpu wlan temperature battery date
 
-tray-position = right
+tray-position = ${env:TRAY_POS:}
 tray-padding = 2
 ;tray-transparent = true
 tray-background = ${colors.background}
