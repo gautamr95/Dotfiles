@@ -50,5 +50,6 @@
 rofi.font: Hack 20
 rofi.modi: window,run,ssh,drun
 
-Xcursor.size: 20
+Xcursor.size: 30
 
+Xft.dpi: 175
