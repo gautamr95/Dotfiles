@@ -113,3 +113,7 @@ alias envnordic='cd ~/co/nordic && run_docker_container samsara-nordic-dev'
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 eval "$(direnv hook zsh)"
+
+alias docker-fw='docker run --pid host --network host -u $(id -u):$(id -g) -v /etc/passwd:/etc/passwd -v $(echo ~):$(echo ~) -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent -w $(pwd) -it dockerbuildkite_build:latest'
+
+(cat ~/.cache/wal/sequences &)
