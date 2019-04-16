@@ -85,6 +85,7 @@ autocmd! BufWritePost * Neomake
 set ff=unix
 
 let g:go_fmt_command = "gofmt"
+let g:go_bin_path = '/home/gautam/.vimgo'
 autocmd FileType go setlocal tabstop=2|setlocal shiftwidth=2|setlocal softtabstop=2|setlocal noexpandtab
 autocmd FileType go compiler go
 au FileType go nmap gd <Plug>(go-def)
