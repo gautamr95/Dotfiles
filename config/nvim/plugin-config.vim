@@ -1,6 +1,9 @@
 """ ruby config
 let ruby_operators = 1
 
+""" Clang-format
+let g:clang_format#detect_style_file = 1
+let g:clang_format#auto_format = 1
 
 """ editorconfig
 "let g:EditorConfig_core_mode = 'external_command'

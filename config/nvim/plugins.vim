@@ -34,6 +34,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
 Plug 'fatih/vim-go'
 Plug 'whatyouhide/vim-gotham'
+Plug 'rhysd/vim-clang-format'
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 
