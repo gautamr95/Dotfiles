@@ -220,7 +220,7 @@ exec /usr/lib/geoclue-2.0/demos/agent
 
 exec eval "$(ssh-agent -s)"
 exec ssh-add $HOME/.ssh/id_rsa
-exec xset s 300 300
+exec xset s 600
 exec xss-lock -l $HOME/transfer-sleep-lock-i3lock.sh&
 
 # assign [class="Spotify"] 3
