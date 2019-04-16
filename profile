@@ -18,8 +18,6 @@ fi
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-
-export PATH="$HOME/.cargo/bin:$PATH"
 export SSH_ASKPASS=/usr/bin/ssh-askpass
 eval "$(ssh-agent -s)"
 ssh-add $HOME/.ssh/id_rsa &

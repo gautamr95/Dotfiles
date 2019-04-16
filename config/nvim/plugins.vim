@@ -27,6 +27,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'SirVer/ultisnips'                 " Snippets engine
 Plug 'honza/vim-snippets'               " Snippets
 Plug 'dylanaraps/wal.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 
