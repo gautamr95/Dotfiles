@@ -31,6 +31,8 @@ Plug 'dylanaraps/wal.vim'
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
 Plug 'fatih/vim-go'
 Plug 'whatyouhide/vim-gotham'
+Plug 'rhysd/vim-clang-format'
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 
