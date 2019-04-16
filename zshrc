@@ -110,4 +110,7 @@ function run_docker_container() {
 alias envnordic='cd ~/co/nordic && run_docker_container samsara-nordic-dev'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+alias docker-fw='docker run --pid host --network host -u $(id -u):$(id -g) -v /etc/passwd:/etc/passwd -v $(echo ~):$(echo ~) -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent -w $(pwd) -it dockerbuildkite_build:latest'
+
 (cat ~/.cache/wal/sequences &)
