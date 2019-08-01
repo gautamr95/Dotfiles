@@ -106,6 +106,13 @@ function run_docker_container() {
   docker-compose exec dev bash
 }
 
+
+autoload bashcompinit
+bashcompinit
+if [ -f $HOME/co/backend/bin/taskrunner-completion.bash ]; then
+  . $HOME/co/backend/bin/taskrunner-completion.bash
+fi
+
 alias envnordic='cd ~/co/nordic && run_docker_container samsara-nordic-dev'
 
 #(cat ~/.cache/wal/sequences &)
