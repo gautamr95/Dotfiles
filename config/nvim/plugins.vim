@@ -9,7 +9,6 @@ Plug 'scrooloose/nerdcommenter'         " Awesome Commenting
 Plug 'vim-scripts/auto-pairs-gentle'    " Add brackets automatically
 Plug 'vim-scripts/autoswap.vim'         " Handle swap files intelligently
 Plug 'sheerun/vim-polyglot'             " Mega language support pack
-Plug 'dracula/vim'                      " Dracular color scheme
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'tpope/vim-fugitive'               " Git wrapper
 Plug 'itchyny/lightline.vim'            " Awesome status bar
@@ -33,9 +32,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'frankier/neovim-colors-solarized-truecolor-only'
 Plug 'fatih/vim-go'
-Plug 'whatyouhide/vim-gotham'
 Plug 'rhysd/vim-clang-format'
 Plug 'majutsushi/tagbar'
-
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+"Plug 'valloric/youcompleteme'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
