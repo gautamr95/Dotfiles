@@ -55,18 +55,19 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-#font-0 = Roboto:fontformat=truetype:size=10;1
-#font-1 = RobotoMonoNerdFont:fontformat=truetype:size=10;1
-#font-0 = Hack:fontformat=truetype:size=10;1
-font-0 = KnackNerdFont:fontformat=truetype:size=18;1
-font-1 = FontAwesome:pixelsize=20;3
+;#font-0 = Roboto:fontformat=truetype:size=10;1
+;#font-1 = RobotoMonoNerdFont:fontformat=truetype:size=10;1
+;#font-0 = Hack:fontformat=truetype:size=10;1
+font-0 = Hack Nerd Font:size=18;2
+font-1 = FontAwesome:size=18;2
+font-2 = Noto Sans CJK JP:size=18;2
 ;font-3 = Font Awesome 5 Brands:pixelsize=10;3
 
 modules-left = i3
 modules-center = spotify
 modules-right = volume memory cpu wlan temperature date
 
-tray-position = ${env:TRAY_POS:}
+tray-position = ${env:TRAY_POS:none}
 tray-padding = 5
 tray-maxsize = 30
 ;tray-transparent = true
@@ -149,7 +150,7 @@ ws-icon-default = 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 0
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
