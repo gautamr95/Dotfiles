@@ -48,6 +48,8 @@ then
 
         title_idx=$((title_idx+1))
         echo $title_idx > "$title_idx_fname"
+    else
+        rm -rf $TMP_IDX_FOLDER_NAME/*
     fi
 
     if [ $status == "Playing" ]
