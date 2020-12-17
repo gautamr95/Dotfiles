@@ -171,13 +171,6 @@ label-urgent = %icon%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
-[module/mpd]
-type = internal/mpd
-format-offline  mpd is offline
-;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <bar-progress> <label-time>  <label-song>
-
-
 icon-prev = 
 icon-stop = 
 icon-play = 
