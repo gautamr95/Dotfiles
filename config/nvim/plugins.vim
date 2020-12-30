@@ -16,7 +16,6 @@ Plug 'itchyny/lightline.vim'            " Awesome status bar
 Plug 'neomake/neomake'                  " Syntax checking
 Plug 'ctrlpvim/ctrlp.vim'               " ctrlp fuzzy finder
 Plug 'editorconfig/editorconfig-vim'    " .editorconfig support
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Keyword completion
 Plug 'tpope/vim-surround'               " Change your surroundings
 Plug 'terryma/vim-multiple-cursors'     " Multiple cursors
 Plug 'Yggdroot/indentLine'              " Indent guides
@@ -29,6 +28,7 @@ Plug 'honza/vim-snippets'               " Snippets
 Plug 'dylanaraps/wal.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'majutsushi/tagbar'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 

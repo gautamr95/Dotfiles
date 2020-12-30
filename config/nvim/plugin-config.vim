@@ -22,13 +22,6 @@ let g:indentLine_char = '┆'
 " Use <leader>e to go to the next error
 nnoremap <leader>e :call LocationNext()<cr>
 
-
-""" deoplete configuration
-let g:deoplete#enable_at_startup = 1
-" Improve ultisnips and deoplete integration
-call deoplete#custom#source('ultisnips', 'matchers', ['matcher_fuzzy'])
-
-
 """ NERDCommenter
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
