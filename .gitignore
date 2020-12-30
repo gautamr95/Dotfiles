@@ -1,2 +1,5 @@
 # exclude nvim plugins
 config/nvim/plugged/*
+
+# exclude ranger history
+config/ranger/history
