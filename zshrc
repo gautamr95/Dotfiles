@@ -93,9 +93,7 @@ export ANDROIDPATH=$HOME/Android
 export PATH=$GOPATH/bin:$ANDROIDPATH/Sdk/platform-tools:$PATH
 export PATH=$HOME/Downloads/GitHub/Pokemon-Terminal:$PATH
 #export PATH=/opt/cuda/bin:$PATH
-
-. /home/gautam/google-cloud-sdk/path.zsh.inc
-. /home/gautam/google-cloud-sdk/completion.zsh.inc
+export PATH=$HOME/.cargo/bin/:$PATH
 
 . /usr/share/doc/pkgfile/command-not-found.zsh
 
@@ -112,3 +110,6 @@ export PATH=$HOME/Downloads/GitHub/Pokemon-Terminal:$PATH
 #PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"
 
 (cat ~/.cache/wal/sequences &)
+
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
