@@ -91,8 +91,6 @@ export TERM=xterm-256color
 export GOPATH=$HOME/go
 export ANDROIDPATH=$HOME/Android
 export PATH=$GOPATH/bin:$ANDROIDPATH/Sdk/platform-tools:$PATH
-export PATH=$HOME/Downloads/GitHub/Pokemon-Terminal:$PATH
-#export PATH=/opt/cuda/bin:$PATH
 export PATH=$HOME/.cargo/bin/:$PATH
 
 . /usr/share/doc/pkgfile/command-not-found.zsh
