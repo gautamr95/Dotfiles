@@ -25,6 +25,16 @@ let g:indentLine_char = '┆'
 " Use <leader>e to go to the next error
 nnoremap <leader>e :call LocationNext()<cr>
 
+autocmd CompleteDone * pclose
+
+""" Vim-Go
+let g:go_bin_path = '/home/gautam/.vimgo'
+"au FileType go setlocal omnifunc=go#complete#GocodeComplete
+
+"autocmd FileType go setlocal tabstop=2|setlocal shiftwidth=2|setlocal softtabstop=2|setlocal noexpandtab
+"autocmd FileType go compiler go
+"au FileType go nmap gd <Plug>(go-def)
+
 """ NERDCommenter
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -52,6 +62,9 @@ endfunction
 """ Custom Javascript configuration
 let g:javascript_plugin_jsdoc = 1    " Highlight JSDoc
 
+""" Tsx prettier
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
 let g:lightline = {
       \ 'colorscheme': 'wal',
@@ -65,6 +78,10 @@ let g:lightline = {
       \   'filetype': 'MyFiletype'
       \ },
       \ }
+
+
+""" Rust
+"let g:rustfmt_autosave = 1
 
 function! NeomakeLightlineStatus()
     if !exists('*neomake#statusline#LoclistCounts')
