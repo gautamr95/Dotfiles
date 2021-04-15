@@ -55,6 +55,9 @@ ZSH_THEME="robbyrussell"
 plugins=(git colored-man-pages command-not-found)
 
 source $ZSH/oh-my-zsh.sh
+#source $HOME/.git-completion.bash
+fpath=(~/ $fpath)
+fpath+=~/.zfunc
 
 # User configuration
 
@@ -110,6 +113,7 @@ function run_docker_container() {
 
 autoload bashcompinit
 bashcompinit
+compinit
 if [ -f $HOME/co/backend/bin/taskrunner-completion.bash ]; then
   . $HOME/co/backend/bin/taskrunner-completion.bash
 fi
@@ -121,3 +125,5 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias docker-fw='docker run --pid host --network host -u $(id -u):$(id -g) -v /etc/passwd:/etc/passwd -v $(echo ~):$(echo ~) -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent -w $(pwd) -it dockerbuildkite_build:latest'
 
 (cat ~/.cache/wal/sequences &)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
