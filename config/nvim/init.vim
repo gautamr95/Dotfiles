@@ -8,6 +8,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall
 endif
 
+"let g:polyglot_disabled = ['typescript']
 let mapleader="," " Change <leader> to ,
 
 source $HOME/.config/nvim/plugins.vim
@@ -71,7 +72,9 @@ set undoreload=10000 "max number lines to save for undo on buffer reload
 
 " Use old regexp engine
 " This speeds up Ruby syntax highlighting
-set regexpengine=1
+"set regexpengine=0
+" Use new regexp engine to fix tsx highlighting
+set regexpengine=0
 
 " Filetype specific settings
 autocmd! filetype *commit*,markdown setlocal spell         " Spell Check
@@ -83,12 +86,6 @@ autocmd! BufReadPost * call SetCursorPosition()
 autocmd! BufWritePost * Neomake
 
 set ff=unix
-
-let g:go_fmt_command = "gofmt"
-let g:go_bin_path = '/home/gautam/.vimgo'
-autocmd FileType go setlocal tabstop=2|setlocal shiftwidth=2|setlocal softtabstop=2|setlocal noexpandtab
-autocmd FileType go compiler go
-au FileType go nmap gd <Plug>(go-def)
 
 " Move lines up(-) or down(_)
 noremap - ddp
