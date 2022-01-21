@@ -22,6 +22,7 @@ Plug 'Yggdroot/indentLine'              " Indent guides
 Plug 'easymotion/vim-easymotion'        " Navigate files with ease
 Plug 'scrooloose/nerdtree'              " File tree view
 Plug 'ryanoasis/vim-devicons'
+Plug 'arcticicestudio/nord-vim'         " Nord Theme
 
 Plug 'SirVer/ultisnips'                 " Snippets engine
 Plug 'honza/vim-snippets'               " Snippets

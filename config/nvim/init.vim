@@ -23,7 +23,7 @@ endif
 
 " Colorscheme
 set background=dark
-colorscheme wal
+colorscheme nord
 hi Normal guibg=None ctermbg=None
 hi NonText guibg=None ctermbg=None
 
