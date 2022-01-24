@@ -5,8 +5,48 @@
 
 ## CONFIGURATION ##############################################################
 
+alpha="55"
+red=$(xrdb -query | grep "*color9:" | cut -f2)
+green=$(xrdb -query | grep "*color10:" | cut -f2)
+blue=$(xrdb -query | grep "*color6:" | cut -f2)
+yellow=$(xrdb -query | grep "*color3:" | cut -f2)
+black=$(xrdb -query | grep "*background:" | cut -f2)
+white=$(xrdb -query | grep "*foreground:" | cut -f2)
+
 # Options to pass to i3lock
-i3lock_options="-k -e -B=10"
+i3lock_options="-k -e -B=10 \
+    --indicator \
+    --inside-color=$black \
+    --insidever-color=$blue \
+    --insidewrong-color=$red \
+    --ring-color=$green$alpha\
+    --ringver-color=$blue$alpha \
+    --ringwrong-color=$red$alpha \
+    --line-uses-ring \
+    --keyhl-color=$green \
+    --bshl-color=$red \
+    --separator-color=$black$alpha\
+    --verif-color=$white \
+    --wrong-color=$white \
+    --modif-color=$white \
+    --layout-color=$white \
+    --time-color=$white \
+    --date-color=$white \
+    --greeter-color=$white \
+    --timeoutline-color=$black \
+    --dateoutline-color=$black \
+    --layoutoutline-color=$black \
+    --verifoutline-color=$black \
+    --wrongoutline-color=$black \
+    --greeteroutline-color=$black \
+    --modifoutline-color=$black \
+    --time-font=Hack \
+    --date-font=Hack \
+    --layout-font=Hack \
+    --verif-font=Hack \
+    --wrong-font=Hack \
+    --greeter-font=Hack \
+    "
 
 id=$(xinput | grep -i Mouse | cut -f2 | cut -d "=" -f2 | sort -r | head -1)
 
