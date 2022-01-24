@@ -255,8 +255,6 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
 bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
 
-bindsym $mod+Shift+x exec i3lock-fancy -f Hack -- scrot -z
-
 #bindsym XF86AudioMute exec amixer -q set Master toggle
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
