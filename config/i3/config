@@ -15,8 +15,7 @@ set $alt Mod1
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 8
-#font pango:DejaVu Sans Mono 9
-font pango:Roboto 10
+font pango:Hack 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -256,7 +255,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
 bindsym --release Shift+Print exec scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
 
-bindsym $mod+Shift+x exec i3lock-fancy -f Roboto-Regular -- scrot -z
+bindsym $mod+Shift+x exec i3lock-fancy -f Hack -- scrot -z
 
 #bindsym XF86AudioMute exec amixer -q set Master toggle
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
@@ -339,3 +338,13 @@ mode "$mode_gaps_outer" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+# Dunst
+# Close notification
+bindsym $alt+space exec dunstctl close
+# Close all notifications
+bindsym $alt+shift+space exec dunstctl close-all
+# Redisplay last message
+bindsym $alt+grave exec dunstctl history-pop
+# Context Menu
+bindsym $alt+shift+period exec dunstctl context
