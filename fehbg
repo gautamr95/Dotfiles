@@ -1,4 +1,2 @@
 #!/bin/sh
-
-# depends on nordic-wallpapers
-feh --no-fehbg --bg-fill '/usr/share/backgrounds/nordic-wallpapers/ign_nordhills.png'
+feh --no-fehbg --bg-fill '/home/gautam/.wall.png'
