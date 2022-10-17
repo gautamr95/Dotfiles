@@ -119,3 +119,4 @@ source $HOME/.config/nvim/plugin-config.vim
 
 " test 1
 " test 2
+" test 3
