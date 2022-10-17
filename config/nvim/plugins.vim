@@ -34,3 +34,4 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " test 1
+" test 2
