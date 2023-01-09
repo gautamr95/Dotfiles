@@ -1,0 +1,3 @@
+[submodule "config/ranger/ranger_udisk_menu"]
+	path = config/ranger/ranger_udisk_menu
+	url = https://github.com/SL-RU/ranger_udisk_menu
